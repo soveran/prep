@@ -31,9 +31,9 @@
 #include <stdio.h>
 
 static int skip(void) {
-	char c;
+	int c;
 
-	while((c = (char) getchar())) {
+	while((c = getchar())) {
 		switch (c) {
 		case EOF:
 			return 1;
@@ -49,7 +49,7 @@ static int skip(void) {
 }
 
 int main(int argc, char **argv) {
-	char c;
+	int c;
 	int l = 0;
 	int f = -1;
 
@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
 		prefix = "#";
 	}
 
-	while((c = (char) getchar()) != EOF) {
+	while((c = getchar()) != EOF) {
 		switch (c) {
 		case '\n':
 			putchar(c);
